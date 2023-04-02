@@ -1,7 +1,7 @@
 {
   "name": "dg-movies",
   "version": "0.1.0",
-  "private": false,
+  "private": true,
   "homepage": "https://alex-antonnie-dev.github.io/dg-movies-list",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "main -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
