@@ -35,7 +35,7 @@ const ImageGrid = () => {
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
       {images.map(image => (
         <div style={{ width: '25%', padding: '10px' }}>
-          <img src={`http://localhost/practice/dg_workshop/images/${image['poster-image']}`} />
+          <img src={`https://karthikacreations.in/assets/images/dg_images/${image['poster-image']}`} />
           <p>{image.name}</p>
         </div>
       ))}
