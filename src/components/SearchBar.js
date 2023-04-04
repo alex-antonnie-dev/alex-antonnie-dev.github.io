@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { setSearchQuery } from '../reducers/SearchReducer';
+import classes from './SearchBar.module.css';
 
 function SearchBar() {
   const [query, setQuery] = useState('');
@@ -11,7 +12,7 @@ function SearchBar() {
   };
 
   return (
-    <div>
+    <div className={classes.search_bar}>
       <input
         type="text"
         placeholder="Search images"

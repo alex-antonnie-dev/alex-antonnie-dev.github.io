@@ -1,0 +1,38 @@
+/* Styles for web screens */
+@media screen and (min-width: 768px) {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .image_item {
+      width: calc(25% - 20px);
+      margin: 10px;
+      text-align: center;
+    }
+    
+    .image_item img {
+      max-width: 100%;
+    }
+  }
+  
+  /* Styles for mobile screens */
+  @media screen and (max-width: 767px) {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .image_item {
+      width: calc(50% - 10px);
+      margin: 5px;
+      text-align: center;
+    }
+    
+    .image_item img {
+      max-width: 100%;
+    }
+  }
+  

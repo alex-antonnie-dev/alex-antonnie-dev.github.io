@@ -12,7 +12,9 @@ const ImageGrid = () => {
   console.log('page', page);
   
   useEffect(() => {
-    dispatch(fetchImages(pageChange));
+    if(pageChange <= 3){
+      dispatch(fetchImages(pageChange));
+    }
   }, [pageChange]);
 
   const handleScroll = () => {
@@ -33,12 +35,16 @@ const ImageGrid = () => {
   }, []);
 
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+    <>
       <SearchBar />
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+
       {images.map(image => (
         <ImageItem title={image.name} image={image['poster-image']} />
       ))}
     </div>
+    </>
+    
   );
 };
 

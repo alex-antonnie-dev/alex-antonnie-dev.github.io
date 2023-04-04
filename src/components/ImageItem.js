@@ -1,4 +1,5 @@
 import {useSelector} from 'react-redux';
+import classes from './ImageItem.module.css';
 
 function ImageItem({  title, image }) {
     const searchQuery = useSelector((state) => state.search.query);
@@ -8,7 +9,7 @@ function ImageItem({  title, image }) {
     }
   
     return (
-        <div class='image-item' style={{ width: '25%', padding: '10px' }}>
+        <div class={classes.image_item} style={{ width: '25%', padding: '10px' }}>
         <img src={`https://karthikacreations.in/assets/images/dg_images/${image}`} alt={title}/>
         <p>{title}</p>
       </div>

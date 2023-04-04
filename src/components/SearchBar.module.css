@@ -1,0 +1,50 @@
+/* Styles for web screens */
+@media screen and (min-width: 768px) {
+    .search_bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .search_bar input {
+      width: 60%;
+      padding: 10px;
+      margin-right: 10px;
+    }
+    
+    .search_bar button {
+      padding: 10px 20px;
+      background-color: #007aff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  
+  /* Styles for mobile screens */
+  @media screen and (max-width: 767px) {
+    .search_bar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    
+    .search_bar input {
+      width: 60%;
+      padding: 10px;
+      margin-right: 10px;
+    }
+    
+    .search_bar button {
+      padding: 10px 20px;
+      background-color: #007aff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  

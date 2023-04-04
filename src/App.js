@@ -7,7 +7,7 @@ import ImageGrid from './components/ImageGrid';
 function App() {
   return (
     <Provider store={store}>
-      <div className="App">
+      <div className="container">
         <ImageGrid />
       </div>
     </Provider>
