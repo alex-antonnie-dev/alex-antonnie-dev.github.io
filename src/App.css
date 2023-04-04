@@ -24,8 +24,37 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Import the Titillium Web font */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+/* Use Titillium Web as the default font for the body */
+body {
+  font-family: 'Titillium Web', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/* Use Titillium Web for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Titillium Web', sans-serif;
+  color: white;
+}
+
+/* Use Titillium Web for specific elements */
+.header {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.footer {
+  font-family: 'Titillium Web', sans-serif;
+}
+
+/* Change font-weight, font-size, or other font properties */
+p {
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 @keyframes App-logo-spin {
