@@ -1,6 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchImages } from '../actions/imagesActions';
+import ImageItem from './ImageItem';
+import SearchBar from './SearchBar';
 
 const ImageGrid = () => {
   const [pageChange, setPageChange] = useState(1);
@@ -18,7 +20,6 @@ const ImageGrid = () => {
     const windowHeight = window.innerHeight;
     const fullHeight = document.documentElement.offsetHeight;
     if (scrollTop + windowHeight >= fullHeight) {
-      console.log('yesss',scrollTop, windowHeight, fullHeight);
       // dispatch(fetchImages(page+1));
       setPageChange((prev) => prev + 1);
     }
@@ -33,11 +34,9 @@ const ImageGrid = () => {
 
   return (
     <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <SearchBar />
       {images.map(image => (
-        <div style={{ width: '25%', padding: '10px' }}>
-          <img src={`https://karthikacreations.in/assets/images/dg_images/${image['poster-image']}`} />
-          <p>{image.name}</p>
-        </div>
+        <ImageItem title={image.name} image={image['poster-image']} />
       ))}
     </div>
   );
