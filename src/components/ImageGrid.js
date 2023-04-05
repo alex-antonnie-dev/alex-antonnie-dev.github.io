@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchImages } from '../actions/imagesActions';
 import ImageItem from './ImageItem';
 import SearchBar from './SearchBar';
+import { nanoid } from 'nanoid';
 
 const ImageGrid = () => {
   const [pageChange, setPageChange] = useState(1);
@@ -40,7 +41,7 @@ const ImageGrid = () => {
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
 
       {images.map(image => (
-        <ImageItem title={image.name} image={image['poster-image']} />
+        <ImageItem key={nanoid()} title={image.name} image={image['poster-image']} />
       ))}
     </div>
     </>

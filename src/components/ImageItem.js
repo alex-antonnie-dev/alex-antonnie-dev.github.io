@@ -9,8 +9,10 @@ function ImageItem({  title, image }) {
     }
   
     return (
-        <div class={classes.image_item} style={{ width: '25%', padding: '10px' }}>
-        <img src={`https://karthikacreations.in/assets/images/dg_images/${image}`} alt={title}/>
+        <div className={classes.image_item} style={{ width: '25%', padding: '10px' }}>
+        <img src={`https://karthikacreations.in/assets/images/dg_images/${image}`} alt={title} onError={(e) => {
+          e.target.onerror = null; // prevent infinite loop
+        }}/>
         <p>{title}</p>
       </div>
     );
