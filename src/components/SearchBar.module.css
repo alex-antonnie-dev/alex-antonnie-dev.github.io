@@ -11,15 +11,6 @@
     padding: 10px;
     margin-right: 10px;
   }
-  
-  .search_bar button {
-    padding: 10px 20px;
-    background-color: #007aff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
 }
 
 /* Styles for mobile screens */
@@ -36,15 +27,7 @@
     padding: 10px;
     margin-right: 10px;
   }
-  
-  .search_bar button {
-    padding: 10px 20px;
-    background-color: #007aff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
+
 }
 
 .search_field input[type="text"] {
