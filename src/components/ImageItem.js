@@ -1,11 +1,13 @@
 import {useSelector} from 'react-redux';
-import classes from './ImageItem.module.css';
+// import classes from './ImageItem.module.css';
+import {Image} from 'react-bootstrap';
+import {Col} from 'react-bootstrap';
 
 function ImageItem({  title, image }) {
     const searchQuery = useSelector((state) => state.search.query);
 
     const addDefaultSrc = (ev)=> {
-     ev.target.src = 'https://karthikacreations.in/assets/images/dg_images/poster1.jpg';
+     ev.target.src = 'https://karthikacreations.in/assets/images/dg_images/No_Image_Available.jpg';
     }
   
     if (searchQuery && !title.toLowerCase().includes(searchQuery.toLowerCase())) {
@@ -13,10 +15,10 @@ function ImageItem({  title, image }) {
     }
   
     return (
-        <div className={classes.image_item} style={{ width: '25%', padding: '10px' }}>
-        <img src={`https://karthikacreations.in/assets/images/dg_images/${image}`} alt={title} onError={addDefaultSrc}/>
+        <Col xs={4} md={3} style={{'marginBottom': '20px'}}>
+        <Image src={`https://karthikacreations.in/assets/images/dg_images/${image}`} alt={title} onError={addDefaultSrc} fluid style={{ maxWidth: '100%' }} />
         <p>{title}</p>
-      </div>
+      </Col>
     );
   }
 

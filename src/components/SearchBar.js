@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux';
 import { setSearchQuery } from '../reducers/SearchReducer';
 import classes from './SearchBar.module.css';
 import debounce from 'lodash.debounce';
+import {Col, Row} from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
 
 function SearchBar() {
   const queryRef = useRef('');
@@ -33,18 +35,25 @@ function SearchBar() {
   },[searchVisible])
 
   return (
-    <div className={classes.search_container}>
+    <Row className={classes.search_container} style={{'width':'100%'}}>
+    <Col xs={6} sm={7} style={{'paddingLeft':'0px'}}>
+      <i className={`fa fa-arrow-left ${classes.back_icon}`}></i>
+    Romantic Comedy
+    </Col>
+    <Col xs={6} sm={5}>
       {searchVisible && (
-        <div className={classes.search_field}>
-          <input type="text" placeholder="Search..." ref={queryRef} onChange={handleQueryChange} />
+        <div>
+          <Form.Control style={{'backgroundColor': '#333','color': '#fff'}} type="text" placeholder="Search..." ref={queryRef} onChange={handleQueryChange} />
         </div>
       )}
       {!searchVisible && (
-        <div className={classes.search_icon} onClick={toggleSearch}>
-          <i className="fa fa-search"></i>
+        <div onClick={toggleSearch} className={classes.search_icon}>
+          <i className="fa fa-search" style={{'float':'right'}}></i>
         </div>
       )}
-    </div>
+    </Col>
+    </Row>
+
   );
 }
 

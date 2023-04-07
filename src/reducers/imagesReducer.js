@@ -3,7 +3,7 @@ import { fetchImages } from '../actions/imagesActions';
 
 const initialState = {
   images: [],
-  page: 1,
+  page: 0,
   status: 'idle',
   error: null,
 };
@@ -18,10 +18,9 @@ export const imagesSlice = createSlice({
         state.status = 'loading';
       })
       .addCase(fetchImages.fulfilled, (state, action) => {
-        console.log('action', state.page)
         state.status = 'succeeded';
-        state.images = [...state.images, ...action.payload];
-        state.page += 1;
+        state.images = [...state.images, ...action.payload['content-items'].content];
+        state.page   = action.payload['page-num-requested'];
       })
       .addCase(fetchImages.rejected, (state, action) => {
         state.status = 'failed';
