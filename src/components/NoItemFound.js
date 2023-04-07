@@ -4,7 +4,7 @@ import { Alert } from 'react-bootstrap';
 function NoItemFound(props) {
     useEffect(() => {
         props.onLoad();
-    },[props])
+    },[])
   return (
     <h5>
         <Alert variant="primary" style={{textAlign:'center'}}>

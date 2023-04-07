@@ -10,6 +10,7 @@ import NoItemFound from './NoItemFound';
 
 const ImageGrid = () => {
   const [pageChange, setPageChange] = useState(1);
+  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const images = useSelector(state => state.images.images);
   const state = useSelector(state => state.images);
@@ -18,12 +19,12 @@ const ImageGrid = () => {
   
   useEffect(() => {
     if(pageChange <= pageLimit){
-      dispatch(fetchImages(pageChange));
+      console.log('dispatch', dispatch(fetchImages(pageChange)));
     }
   }, [pageChange]);
 
   const changePage = () => {
-    setPageChange((prev) =>  prev + 1)
+    setPageChange((prev) => prev + 1)
   }
 
   const handleScroll = () => {
