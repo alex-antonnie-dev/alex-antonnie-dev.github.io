@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dg-movies-list/static/css/main.9a5af6c7.css",
-    "main.js": "/dg-movies-list/static/js/main.ff2c6f54.js",
+    "main.css": "/dg-movies-list/static/css/main.8fc6252c.css",
+    "main.js": "/dg-movies-list/static/js/main.d2555897.js",
     "static/js/787.213c967c.chunk.js": "/dg-movies-list/static/js/787.213c967c.chunk.js",
     "static/media/fa-solid-900.ttf": "/dg-movies-list/static/media/fa-solid-900.4a2cd718d7031b732e76.ttf",
     "static/media/fa-brands-400.ttf": "/dg-movies-list/static/media/fa-brands-400.150de8eaa454d669c405.ttf",
@@ -12,12 +12,12 @@
     "static/media/fa-v4compatibility.ttf": "/dg-movies-list/static/media/fa-v4compatibility.0e3a648be390bd8cb094.ttf",
     "static/media/fa-v4compatibility.woff2": "/dg-movies-list/static/media/fa-v4compatibility.68577e40f3e70067b5da.woff2",
     "index.html": "/dg-movies-list/index.html",
-    "main.9a5af6c7.css.map": "/dg-movies-list/static/css/main.9a5af6c7.css.map",
-    "main.ff2c6f54.js.map": "/dg-movies-list/static/js/main.ff2c6f54.js.map",
+    "main.8fc6252c.css.map": "/dg-movies-list/static/css/main.8fc6252c.css.map",
+    "main.d2555897.js.map": "/dg-movies-list/static/js/main.d2555897.js.map",
     "787.213c967c.chunk.js.map": "/dg-movies-list/static/js/787.213c967c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9a5af6c7.css",
-    "static/js/main.ff2c6f54.js"
+    "static/css/main.8fc6252c.css",
+    "static/js/main.d2555897.js"
   ]
 }
