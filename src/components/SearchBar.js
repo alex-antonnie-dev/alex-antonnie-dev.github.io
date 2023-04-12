@@ -31,7 +31,7 @@ function SearchBar() {
   };
 
   const handleBackBtn = () => {
-    navigate('/')
+    navigate('/home')
   }
 
   useEffect(() => {

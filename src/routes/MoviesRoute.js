@@ -4,17 +4,22 @@ import Home from "../components/Home";
 import PageNotFound from "../components/PageNotFound";
 
 function MoviesRoute(){
+  
+  const pathname = window.location.pathname;
+  let basename = process.env.REACT_APP_BASENAME || '';
+  const matched = pathname.match(/^\/[^/]+\/student-dashboard/);
+  if (matched) {
+    basename = matched.toString();
+  }
+  console.log('basename', basename);
 
 return(
-    <Router>
+    <Router basename={basename}>
       <Routes>
-        {/* <Route index element={<ImageGrid />} /> */}
-        <Route path="/dg-movies-list" element={<ImageGrid/>} />
-        <Route path="/" element={<Home />} />
+        <Route index element={<ImageGrid />} />
+        <Route path="/" element={<ImageGrid/>} />
+        <Route path="home" element={<Home />} />
         <Route path="*" element={<PageNotFound />} />
-        {/* <Route path="/error404" element={<Error404 />} />
-        <Route path="/error403" element={<Error403 />} /> */}
-        {/* <Route path="/community-tabs-iframe" element={<CommunityForumTabs />} /> */}
       </Routes>
     </Router>
   );
