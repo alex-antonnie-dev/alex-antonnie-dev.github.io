@@ -5,11 +5,13 @@ import classes from './SearchBar.module.css';
 import debounce from 'lodash.debounce';
 import {Col, Row} from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
+import { useNavigate } from 'react-router-dom';
 
 function SearchBar() {
   const queryRef = useRef('');
   const [searchVisible, setSearchVisible] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const toggleSearch = () => {
     setSearchVisible(!searchVisible);
@@ -28,6 +30,10 @@ function SearchBar() {
     debouncedSearch(newQuery);
   };
 
+  const handleBackBtn = () => {
+    navigate('/')
+  }
+
   useEffect(() => {
     if(searchVisible){
       queryRef.current.focus();
@@ -37,7 +43,7 @@ function SearchBar() {
   return (
     <Row className={classes.search_container} style={{'width':'100%'}}>
     <Col xs={6} sm={7} style={{'paddingLeft':'0px'}}>
-      <i className={`fa fa-arrow-left ${classes.back_icon}`}></i>
+      <i className={`fa fa-arrow-left ${classes.back_icon}`} onClick={handleBackBtn}></i>
     Romantic Comedy
     </Col>
     <Col xs={6} sm={5}>

@@ -10,16 +10,13 @@ import NoItemFound from './NoItemFound';
 
 const ImageGrid = () => {
   const [pageChange, setPageChange] = useState(1);
-  const [loading, setLoading] = useState(false);
   const dispatch = useDispatch();
   const images = useSelector(state => state.images.images);
-  const state = useSelector(state => state.images);
-  const page  = state.page;
   const searchQuery = useSelector((state) => state.search.query);
   
   useEffect(() => {
     if(pageChange <= pageLimit){
-      console.log('dispatch', dispatch(fetchImages(pageChange)));
+      dispatch(fetchImages(pageChange));
     }
   }, [pageChange]);
 
@@ -34,11 +31,6 @@ const ImageGrid = () => {
     if (scrollTop + windowHeight >= fullHeight) {
       changePage();
     }
-    // console.log('called');
-    // if (window.innerHeight + window.scrollY >= document.body.offsetHeight-1000) {
-    //   console.log('inside');
-    //   changePage();
-    // }
   };
 
   useEffect(() => {
@@ -67,15 +59,12 @@ const ImageGrid = () => {
     <>
       <SearchBar />
       <Row style={{'width':'100%'}}>
-        {itemCount == 0 && searchQuery != '' && 
-          <NoItemFound message="No results found." onLoad={changePage}/>
+        {itemCount === 0 && searchQuery !== '' && 
+          <NoItemFound className="mt-5" message="No results found." onLoad={changePage}/>
         }
         {itemCount > 0 &&
           content
         }
-      {/* {images.map(image => (
-          <ImageItem key={nanoid()} title={image.name} image={image['poster-image']} />
-      ))} */}
     </Row>
     </>
     
