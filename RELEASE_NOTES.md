@@ -5,6 +5,7 @@
 * Back button functionality in listing page
 * Error page is implement if the route is not matched.
 * Implemented custom favicon
+* Handled long text in movie title
 
 # Improvements
 * Improved handling of missing images

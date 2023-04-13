@@ -1,0 +1,9 @@
+p.title{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 182px;
+}
+.image_item{
+    margin-bottom: 20px;
+}
