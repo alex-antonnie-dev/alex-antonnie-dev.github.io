@@ -10,6 +10,7 @@ const ImageItem = (props) => {
     const defaultImageURL = 'https://karthikacreations.in/assets/images/dg_images/placeholder_for_missing_posters.png?v=1.1';
 
     const checkImage = (ev) => {
+      // to check whether the image exist or not and to fallback to default image is not exist
       const naturalWidth = imgRef.current.naturalWidth;
       const naturalHeight = imgRef.current.naturalHeight;
       if (naturalWidth === 0 || naturalHeight === 0) {
@@ -18,6 +19,7 @@ const ImageItem = (props) => {
     }
 
     const fallBackImage = (ev)=> {
+      //function to set default props to image if url is valid
      ev.target.src = defaultImageURL;
      ev.target.alt = 'Image not available';
     }

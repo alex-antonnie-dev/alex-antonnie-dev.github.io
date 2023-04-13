@@ -15,6 +15,7 @@ const ImageGrid = () => {
   const searchQuery = useSelector((state) => state.search.query);
   
   useEffect(() => {
+    //whenever the page is changed api is initiated to get the next page data and store in redux
     if(pageChange <= pageLimit){
       dispatch(fetchImages(pageChange));
     }
@@ -25,6 +26,7 @@ const ImageGrid = () => {
   }
 
   const handleScroll = () => {
+    //function to detect page scrolling and inititate page change
     const scrollTop = document.documentElement.scrollTop;
     const windowHeight = window.innerHeight;
     const fullHeight = document.documentElement.offsetHeight;
@@ -46,8 +48,10 @@ const ImageGrid = () => {
   let itemCount = 0;
   let content = images.map((image) => {
     if (searchQuery && !image.name.toLowerCase().includes(searchQuery.toLowerCase())) {
+      //Image item will only return if the search text matches the title of image if search is not empty
       return null;
     } else {
+      //to know the item count matched
       itemCount++;
       return(
         <ImageItem key={nanoid()} title={image.name} image={image['poster-image']} />

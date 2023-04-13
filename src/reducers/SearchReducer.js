@@ -1,5 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+//to store the entered search text in redux
+
 const searchSlice = createSlice({
   name: 'search',
   initialState: { query: '' },

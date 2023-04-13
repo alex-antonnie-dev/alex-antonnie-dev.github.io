@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { fetchImages } from '../actions/imagesActions';
 
+//to save the loaded images in redux
+
 const initialState = {
   images: [],
   page: 0,

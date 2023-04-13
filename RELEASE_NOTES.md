@@ -8,9 +8,9 @@
 * Handled long text in movie title
 
 # Improvements
-* Improved handling of missing images
-* Since lazy loading of modules implement performance is increased since only need modules are loaded
-* Code structure improved
+* Improved handling of missing images.
+* Since lazy loading of modules implement performance is increased since only need modules are loaded.
+* Code structure improved and comments are added in the code.
 * Searching character is limited to 20.
 
 

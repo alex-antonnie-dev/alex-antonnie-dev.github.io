@@ -1,11 +1,11 @@
 import {lazy} from 'react';
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
-import ImageGrid from "../components/ImageGrid";
-import Home from "../components/Home";
-import PageNotFound from "../components/PageNotFound";
+// import ImageGrid from "../components/ImageGrid";
+// import Home from "../components/Home";
+// import PageNotFound from "../components/PageNotFound";
 
-const Movies = lazy(() => import("../modules/movies"));
-const HomePage = lazy(() => import("../modules/homePage"));
+const Movies    = lazy(() => import("../modules/movies"));
+const HomePage  = lazy(() => import("../modules/homePage"));
 const ErrorPage = lazy(() => import("../modules/errorPage"));
 
 
