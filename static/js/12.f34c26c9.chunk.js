@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdg_movies=self.webpackChunkdg_movies||[]).push([[12],{3012:function(e,s,u){u.r(s);var n=u(2862),t=u(6417);s.default=function(){return(0,t.jsx)(n.Z,{})}}}]);
