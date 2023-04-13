@@ -1,6 +1,6 @@
 ### About this app
 
-This is an app that lists the movies in a page. More movies are loaded from api when page scrolls down.
+This is an app that lists the movies in a page. More movies are loaded from api when page scrolls down. <br/>
 The data is managed by redux.
 Routing implemented to handle multiple pages.
 Missing images are handled.
