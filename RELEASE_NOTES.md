@@ -4,6 +4,7 @@
 * Lazy loading of modules
 * Back button functionality in listing page
 * Error page is implement if the route is not matched.
+* Implemented custom favicon
 
 # Improvements
 * Improved handling of missing images
