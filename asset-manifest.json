@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/dg-movies-list/static/css/main.c427da53.css",
-    "main.js": "/dg-movies-list/static/js/main.57e8f957.js",
-    "static/js/632.1500528f.chunk.js": "/dg-movies-list/static/js/632.1500528f.chunk.js",
+    "main.css": "/dg-movies-list/static/css/main.62c9fba2.css",
+    "main.js": "/dg-movies-list/static/js/main.551146d4.js",
+    "static/js/632.84badf9a.chunk.js": "/dg-movies-list/static/js/632.84badf9a.chunk.js",
     "static/js/158.3207d717.chunk.js": "/dg-movies-list/static/js/158.3207d717.chunk.js",
     "static/js/12.f34c26c9.chunk.js": "/dg-movies-list/static/js/12.f34c26c9.chunk.js",
     "static/js/27.519ba88b.chunk.js": "/dg-movies-list/static/js/27.519ba88b.chunk.js",
@@ -17,7 +17,7 @@
     "index.html": "/dg-movies-list/index.html"
   },
   "entrypoints": [
-    "static/css/main.c427da53.css",
-    "static/js/main.57e8f957.js"
+    "static/css/main.62c9fba2.css",
+    "static/js/main.551146d4.js"
   ]
 }
