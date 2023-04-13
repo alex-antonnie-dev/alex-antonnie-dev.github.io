@@ -49,7 +49,7 @@ function SearchBar() {
     <Col xs={6} sm={5}>
       {searchVisible && (
         <div>
-          <Form.Control style={{'backgroundColor': '#333','color': '#fff'}} type="text" placeholder="Search..." ref={queryRef} onChange={handleQueryChange} />
+          <Form.Control maxLength={20} style={{'backgroundColor': '#333','color': '#fff'}} type="text" placeholder="Search..." ref={queryRef} onChange={handleQueryChange} />
         </div>
       )}
       {!searchVisible && (
